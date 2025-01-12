@@ -1,0 +1,77 @@
+description: La première conférence au cœur des volcans d'Auvergne faite pour les passionnés de technologie, de développement et de terroir.
+author: Geek&Terroir
+keywords: Volcamp, tech conference, conference, auvergne, clermont-fd, Geek&Terroir
+
+url: https://www.volcamp.io
+cfp-url: https://conference-hall.io/public/event/98FptSgEGcOSQZymZkUr
+name: Volcamp
+
+day1: jeudi 10 
+day2: vendredi 11
+month: octobre 2024
+data-year: 2024
+data-month: 10
+data-day: 10
+data-hour: 09
+
+exclude:
+  - README.md
+  - LICENSE.md
+  - Gemfile
+  - Gemfile.lock
+  - .travis.yml
+  - .gitignore
+  - CNAME
+
+navigation:
+ - title: programme
+   url: /talks/
+ - title: intervenants
+   url: /speakers/
+ - title: sponsors
+   url: /sponsors/
+ - title: l'équipe
+   url: /orga/
+
+collections:
+  speakers:
+    output: true
+    permalink: /:collection/:name
+  talks:
+    output: true
+    permalink: /:collection/:name
+
+defaults:
+  - scope:
+      path: ""
+      type: talks
+    values:
+      layout: talks
+  - scope:
+      path: ""
+      type: speakers
+    values:
+      layout: speakers
+  - scope:
+      path: "speakers/tbd"
+    values:
+      sitemap: false
+  - scope:
+      path: "speakers/volcamp"
+    values:
+      sitemap: false
+
+syndication:
+  twitter: http://www.twitter.com/volcampio
+  github: https://github.com/Volcamp
+  linkedin: https://www.linkedin.com/company/volcampio
+  youtube: https://www.youtube.com/channel/UC5iGUFHEJbSTU5wpbT6KIcw/featured
+
+plugins:
+  - jekyll-redirect-from
+  - jekyll-paginate
+  - jekyll-sitemap
+  - jekyll-gzip
+  - jekyll-minifier
+  - kramdown-parser-gfm
+
